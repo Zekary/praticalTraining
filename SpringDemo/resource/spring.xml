@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--在ioc文件中管理一个类的对象-->
+        <bean id="nowUser" class="com.bean.User">
+                <!--property表示给某个属性赋值-->
+                <property name="id" value="1"></property>
+                <property name="name" value="1"></property>
+                <property name="sex" value="1"></property>
+                <property name="age" value="1"></property>
+
+        </bean>
+
+</beans>
