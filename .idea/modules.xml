@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringDemo/SpringDemo.iml" filepath="$PROJECT_DIR$/SpringDemo/SpringDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SsmDemo/SsmDemo.iml" filepath="$PROJECT_DIR$/SsmDemo/SsmDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" filepath="$PROJECT_DIR$/mybatisDemo/mybatisDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisGenerator/mybatisGenerator.iml" filepath="$PROJECT_DIR$/mybatisGenerator/mybatisGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/particalTraining.iml" filepath="$PROJECT_DIR$/particalTraining.iml" />
       <module fileurl="file://$PROJECT_DIR$/springmvcDemo/springmvcDemo.iml" filepath="$PROJECT_DIR$/springmvcDemo/springmvcDemo.iml" />
     </modules>

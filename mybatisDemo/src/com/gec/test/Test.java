@@ -25,11 +25,11 @@ public class Test {
 
 //插入操作(增)
 //        User user = new User();
-//        user.setUsername("Tom");
+//        user.setUsername("tom");
 //        user.setPassword("123456");
 //        int result = userMapper.insertUser(user);
 //        System.out.println(result);
-
+//        session.commit();
 
 //修改操作（改）
 //        User user = new User();

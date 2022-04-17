@@ -1,6 +1,6 @@
 package com.gec.bean;
 
-//根据数据来定义
+//根据数据库来定义
 public class User {
     private int id;
     private String username;

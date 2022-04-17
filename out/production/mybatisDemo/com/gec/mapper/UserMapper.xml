@@ -8,12 +8,15 @@
     </insert>
     
     <update id="updateUser" parameterType="com.gec.bean.User">
-        update user set username=#{username},password=#{password} where id=#{id};
+        update user
+        set username=#{username},password=#{password}
+        where id=#{id};
     </update>
 
     <!-- id相当于方法名  parameterType入参的数据类型-->
     <update id="deleteUser" parameterType="int">
-        delete from user where id=#{id};
+        delete from user
+        where id=#{id};
     </update>
 
     <!-- 定义结果集的映射 查询结果字段和实体类中的变量名进行一对一的映射-->
