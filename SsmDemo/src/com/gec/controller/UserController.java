@@ -58,9 +58,9 @@ public class UserController {
     }
 
     //定义查询操作的请求方法
-    @RequestMapping("/query")
+    @RequestMapping("/queryUser")
 //  @ResponseBody 在本页面观察是否可以查询到值
-    public String query(@RequestParam(required = false,defaultValue = "1") Integer pageNo,HttpServletRequest request){
+    public String queryUser(@RequestParam(required = false,defaultValue = "1") Integer pageNo,HttpServletRequest request){
         //开启分页操作 当前页码  每页显示记录数
         //处理page=0的bug
         if(pageNo==0)
@@ -92,7 +92,7 @@ public class UserController {
         boolean isok = userService.updateUser(user);
         if (isok){
             //修改成功则重新查询数据
-            return "redirect:/query";
+            return "redirect:/queryUser";
         }
         else{
             request.setAttribute("user",user);
@@ -106,7 +106,7 @@ public class UserController {
     public String delete(int id,HttpServletRequest request){
         userService.delete(id);
         //作出响应
-        return "redirect:/query";
+        return "redirect:/queryUser";
     }
 
 
