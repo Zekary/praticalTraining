@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper的命名空间  类似于包名加类名   -->
+<mapper namespace="com.gec.mapper.UserMapper" >
+  <!--id相当于方法名  -->
+    <insert id="insertUser" parameterType="com.gec.bean.User">
+        insert into user(username,password) values (#{username},#{password});
+    </insert>
+    
+    <update id="updateUser" parameterType="com.gec.bean.User">
+        update user
+        set username=#{username},password=#{password}
+        where id=#{id};
+    </update>
+
+    <!-- id相当于方法名  parameterType入参的数据类型-->
+    <update id="deleteUser" parameterType="int">
+        delete from user
+        where id=#{id};
+    </update>
+
+    <!-- 定义结果集的映射 查询结果字段和实体类中的变量名进行一对一的映射-->
+    <resultMap id="UserResultMap" type="com.gec.bean.User">
+        <!--    property实体类中的变量名   column查询结果字段名  -->
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="realname" column="realname"></result>
+        <result property="password" column="password"></result>
+        <result property="card" column="IDcard"></result>
+        <result property="phone" column="phone"></result>
+        <result property="email" column="email"></result>
+        <result property="paypwd" column="paypwd"></result>
+        <result property="status" column="status"></result>
+    </resultMap>
+
+    <!-- id相当于方法名  resultType 查询结果返回的数据类型 resultType="com.gec.bean.User" -->
+    <select id="selectUser" resultMap="UserResultMap">
+        select * from user;
+    </select>
+</mapper>
